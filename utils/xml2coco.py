@@ -72,7 +72,7 @@ def process_xml_to_coco(xml_file, actions_file, coco_format, unique_id):
         image_id = int(image.get('id'))
         if image_id < len(actions):
             print(xml_file)
-            frame_dir = "/".join(xml_file.split('/')[4:6])+'/FRAMES/'+xml_file.split('/')[-1].replace('.xml','')
+            frame_dir = "/home/user/AI-Hackathon24/"+"/".join(xml_file.split('/')[4:6])+'/FRAMES/'+xml_file.split('/')[-1].replace('.xml','')
             image_entry = {
                 "id": unique_img_ids,
                 "file_name": os.path.join(frame_dir, str(int(image.get('name').replace('frame_', vid_name+'/'+vid_name+'_')))+'.png'),
@@ -145,7 +145,7 @@ def main(xml_folder, actions_folder, output_file):
         json.dump(coco_format, f, indent=4)
 
 if __name__ == "__main__":
-    xml_folder = "/home/visionrd/testing/AI-Hackathon24/data/xmls"
-    actions_folder = "/home/visionrd/testing/AI-Hackathon24/data/groundTruth"
-    output_file = "/home/visionrd/testing/AI-Hackathon24/data/merged.json"
+    xml_folder = "/home/user/AI-Hackathon24/data/xml_labels"
+    actions_folder = "/home/user/AI-Hackathon24/data/actions"
+    output_file = "/home/user/AI-Hackathon24/data/merged.json"
     main(xml_folder, actions_folder, output_file)
