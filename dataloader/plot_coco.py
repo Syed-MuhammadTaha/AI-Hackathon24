@@ -73,9 +73,10 @@ def visualize_coco_annotations(json_file, image_dir, output_video):
 
 if __name__ == "__main__":
     # Input paths
-    coco_json_path = "/home/visionrd/testing/AI-Hackathon24/data/merged.json"  # Replace with your COCO JSON path
-    image_dir = "frames"  # Replace with your images directory path
-    output_video_path = "vis_coco.mp4"  # Replace with your desired output video path
+    coco_json_path = "/home/user/AI-Hackathon24/data/merged.json"  # Replace with your COCO JSON path
+    image_dir = "/home/user/AI-Hackathon24/data/gtea_png/png/S1_Cheese_C1"  # Replace with your images directory path
+    output_video_path = "/home/user/AI-Hackathon24/data/1st_coco.mp4"  # Replace with your desired output video path
 
     # Run visualization
     visualize_coco_annotations(coco_json_path, image_dir, output_video_path)
+
